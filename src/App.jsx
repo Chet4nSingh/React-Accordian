@@ -13,12 +13,12 @@ function App() {
   }
 
   return (
-    <main className="my-4 mx-auto w-4/5 bg-slate-400">
+    <main className="my-4 mx-auto w-4/5">
       <h1 className="text-9xl mb-8 text-center">Accordian</h1>
-      <ul className="py-16 px-32 w-full text-white bg-slate-500">
+      <ul className="py-16 px-32 w-full">
         {FAQs.map((faq) => {
           return (
-            <li className="w-full p-4 mb-4 text-2xl border" key={faq.id}>
+            <li id="faq" className="w-full p-4 mb-4 text-2xl border text-black bg-slate-200" key={faq.id}>
               <span className="flex justify-between mb-4">
                 {faq.question}{" "}
                 <span>
@@ -39,8 +39,8 @@ function App() {
                   )}
                 </span>
               </span>
-              {selectedFaq === faq.id && <p>{faq.answer}</p>}
-            </li>
+              {selectedFaq === faq.id && <p id="answer">{faq.answer}</p>}
+            </li>            
           );
         })}
       </ul>
